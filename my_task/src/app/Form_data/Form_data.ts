@@ -36,7 +36,7 @@ export class UserFormComponent implements OnInit{
 
      if (alldata)
      {
-     // this.user = alldata;
+      //this.user = alldata;
       this.employeeForm.patchValue({
         ...alldata
       });

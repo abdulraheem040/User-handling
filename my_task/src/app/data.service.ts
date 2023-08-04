@@ -1,4 +1,3 @@
-
 import { Injectable } from '@angular/core';
 
 export interface users {
@@ -32,9 +31,12 @@ export class DataService {
     return user;
   }
 
-  update(data: any)
-  {
-      
-
+  update(updatedUser: users): boolean {
+    const index = this.ELEMENT_DATA.findIndex((user) => user.Id === updatedUser.Id);
+    if (index !== -1) {
+      this.ELEMENT_DATA[index] = { ...updatedUser };
+      return true; 
+    }
+    return false; 
   }
 }
