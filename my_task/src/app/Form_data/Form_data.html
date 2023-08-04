@@ -1,0 +1,57 @@
+<div class="example-spacer">
+  <mat-toolbar >
+      <button mat-icon-button aria-label="Example icon button with a vertical three dot icon" routerLink="/Users">
+      <mat-icon > < </mat-icon>
+      </button>
+    <span>New Users</span>
+  </mat-toolbar>
+</div>
+<br>
+
+<div style="text-align: center;">
+<form [formGroup]="employeeForm" >
+
+<div>
+
+  <mat-form-field>
+      <label>Enter your id</label>
+      <input matInput formControlName="Id" type="number" required>
+      <mat-error>ID is required.</mat-error>
+  </mat-form-field>
+</div>
+<br>
+<div>
+
+    <mat-form-field>
+      <label>Enter your Name</label>
+        <input matInput formControlName="name" type="text" required>
+        <mat-error>Name is required.</mat-error>
+      </mat-form-field>
+  </div>
+<br>
+<div>
+
+  <mat-form-field>
+      <label>Enter your Password</label>
+      <input matInput formControlName="Password" type="text" required>
+      <mat-error>Password is required.</mat-error>
+  </mat-form-field>
+</div>
+<br>
+<div>
+
+    <mat-form-field >
+      <label>Enter your Email</label>
+        <input matInput placeholder="pat@example.com" formControlName="Email" type="text" required>
+       <mat-error>Email is required.</mat-error>
+      </mat-form-field>
+  </div>
+<br>   
+  <button mat-raised-button color="primary" (click)="onSubmit()" routerLink="/Users">Add</button>
+  <button mat-raised-button routerLink="/Users" color="primary" style="margin-left: 20px;"
+  (click)="on_Update()">Update</button>
+
+</form>
+</div>
+
+  
