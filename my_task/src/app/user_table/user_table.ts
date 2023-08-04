@@ -2,8 +2,7 @@ import { users } from '../data.service';
 import { Router } from '@angular/router';
 import { Component } from '@angular/core';
 import { DataService} from '../data.service';
-import {FormControl, FormBuilder,FormGroup, Validators, FormsModule, ReactiveFormsModule} from '@angular/forms';
-
+import { UserFormComponent } from '../Form_data/Form_data';
 @Component({
   selector: 'app-works',
   templateUrl: './user_table.html',
@@ -11,20 +10,19 @@ import {FormControl, FormBuilder,FormGroup, Validators, FormsModule, ReactiveFor
 })
 export class UserTableComponent {
   
+  
 
   datasource : users[]=[]
   displayedColumns: string[] = ['Name', 'Id', 'Password', 'Email','actions'];
   
-  constructor( private userservice : DataService,private router: Router)
+  private edit!: UserFormComponent
+  constructor( private userservice : DataService, private router: Router)
   {
      
     this.datasource = userservice.ELEMENT_DATA
-
+    
   }
-  //goto()
-  //{
-    //this.router.navigateByUrl('Users/New')
-  //}
+  
   
   delete(row: any): void 
   {
@@ -36,7 +34,6 @@ export class UserTableComponent {
 
     this.datasource = [...this.datasource]
 }
-
 
 }
 

@@ -10,10 +10,9 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class UserFormComponent implements OnInit{
   
-  
   public id: number = 0;
   employeeForm!: FormGroup;
-
+  showAddButton: boolean = true;
   constructor(private fb: FormBuilder, private userservice : DataService,private route: ActivatedRoute) 
   {
       
@@ -36,15 +35,17 @@ export class UserFormComponent implements OnInit{
 
      if (alldata)
      {
-      //this.user = alldata;
       this.employeeForm.patchValue({
         ...alldata
       });
+      this.showAddButton = false;
     }
    });
     
   }
-  onSubmit() {
+  onSubmit()
+  {
+
     if (this.employeeForm.valid) 
     {
       const newEmployee: users = this.employeeForm.value;
@@ -52,10 +53,12 @@ export class UserFormComponent implements OnInit{
       this.employeeForm.reset();
 
     }
+  
   }
 
  on_Update()
  {
+   
    const updatedUserData = this.employeeForm.value;
 
    this.userservice.update(updatedUserData);
