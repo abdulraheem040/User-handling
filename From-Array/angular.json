@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Form_array": {
+    "From-Array": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/form-array",
+            "outputPath": "dist/from-array",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "Form_array:build:production"
+              "browserTarget": "From-Array:build:production"
             },
             "development": {
-              "browserTarget": "Form_array:build:development"
+              "browserTarget": "From-Array:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Form_array:build"
+            "browserTarget": "From-Array:build"
           }
         },
         "test": {
@@ -102,6 +102,6 @@
     }
   },
   "cli": {
-    "analytics": "e933050f-4d78-4bb9-ab3e-2659269b56c4"
+    "analytics": "36e10d85-fe72-47ed-84ba-1993788861de"
   }
 }

@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'Form_array'`, () => {
+  it(`should have as title 'From-Array'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('Form_array');
+    expect(app.title).toEqual('From-Array');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('Form_array app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('From-Array app is running!');
   });
 });
