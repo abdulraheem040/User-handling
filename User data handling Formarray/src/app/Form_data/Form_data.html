@@ -43,12 +43,14 @@
               <mat-error>Email is required.</mat-error>
             </mat-form-field>
           </div>
+<br>
           <button mat-raised-button color="warn" (click)="removeUser(i)">Remove User</button>
         </div>
       </div>
-      <button mat-raised-button color="primary" (click)="addUser()">Add User</button>
+<br>
+        <button mat-raised-button color="primary" (click)="addUser()">Add User</button>
     </div>
-
+<br>
     <button mat-raised-button color="primary" *ngIf="showAddButton" (click)="onSubmit()" routerLink="/Users">Add to Table</button>
     <button mat-raised-button routerLink="/Users" color="primary" style="margin-left: 20px;" *ngIf="!showAddButton"
       (click)="on_Update()">Update</button>
