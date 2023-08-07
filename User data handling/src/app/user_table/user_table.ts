@@ -10,8 +10,6 @@ import { UserFormComponent } from '../Form_data/Form_data';
 })
 export class UserTableComponent {
   
-  
-
   datasource : users[]=[]
   displayedColumns: string[] = ['Name', 'Id', 'Password', 'Email','actions'];
   

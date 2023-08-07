@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder,FormGroup, Validators, FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { FormBuilder,FormGroup, Validators, FormArray} from '@angular/forms';
 import { DataService, users } from '../data.service';
 import { ActivatedRoute } from '@angular/router';
 
@@ -24,6 +24,8 @@ export class UserFormComponent implements OnInit{
       name: ['', Validators.required],
       Password: ['', Validators.required],
       Email: ['', Validators.required],
+
+      
     });
       
       this.route.params.subscribe(params => {
@@ -43,6 +45,8 @@ export class UserFormComponent implements OnInit{
    });
     
   }
+
+ 
   onSubmit()
   {
 
