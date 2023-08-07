@@ -14,7 +14,7 @@
     <div formArrayName="users">
       <div *ngFor="let user of usersFormArray.controls; let i = index">
         <div [formGroupName]="i">
-          <h3>User {{ i + 1 }}</h3>
+          <h3>New User {{ i + 1 }}</h3>
           <div>
             <mat-form-field>
               <label>Enter your id</label>
