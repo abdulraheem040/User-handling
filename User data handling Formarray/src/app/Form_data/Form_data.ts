@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormArray } from '@angular/forms';
 import { DataService, users } from '../data.service';
 import { ActivatedRoute } from '@angular/router';
-
 @Component({
   selector: 'app-todos',
   templateUrl: './Form_data.html',
@@ -75,5 +74,10 @@ export class UserFormComponent implements OnInit {
     for (const updatedUser of updatedUsersData) {
       this.userservice.update(updatedUser);
     }
+  }
+
+  getFormattedFormData(): string 
+  {
+    return JSON.stringify(this.employeeForm.value, null, 2);
   }
 }
