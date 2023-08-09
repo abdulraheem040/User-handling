@@ -12,6 +12,7 @@ export class UserFormComponent implements OnInit {
   public id: number = 0;
   employeeForm!: FormGroup;
   showAddButton: boolean = true;
+  showFiller = false;
 
   constructor(private fb: FormBuilder, private userservice: DataService, private route: ActivatedRoute) { }
 

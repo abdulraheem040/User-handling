@@ -3,12 +3,28 @@
     <button mat-icon-button routerLink="/Users">
       <mat-icon>navigate_before</mat-icon>
     </button>
-    <span >New Users</span>
+    <span ><b>New Users</b></span>
   </mat-toolbar>
 </div>
 <br>
 
-<div style="text-align: center;">
+<div class="container-side-by-side ">
+
+  <mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+      <h3>Assalam O Alaikum</h3>
+      <div>
+        <pre>{{ getFormattedFormData() }}</pre>
+      </div>
+    </mat-drawer>
+    <div class="example-sidenav-content">
+      <button type="button" mat-button (click)="drawer.toggle()">
+        Show users data
+      </button>
+    </div>
+  </mat-drawer-container>
+
+<div style="text-align: center; margin-left: 20%;">
   <form [formGroup]="employeeForm">
 
     <div formArrayName="users">
@@ -60,6 +76,4 @@
   </form>
 </div>
 
-<br>
-
-<pre>{{ getFormattedFormData() }}</pre>
+</div>
