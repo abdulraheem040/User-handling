@@ -1,0 +1,111 @@
+@import '@angular/material/theming';
+
+$primary-palette: (
+    50 : #f0f9e5,
+    100 : #d9f0bf,
+    200 : #c0e695,
+    300 : #a6db6a,
+    400 : #93d44a,
+    500 : #80cc2a,
+    600 : #78c725,
+    700 : #6dc01f,
+    800 : #63b919,
+    900 : #50ad0f,
+    A100 : #e9ffdc,
+    A200 : #c9ffa9,
+    A400 : #a9ff76,
+    A700 : #99ff5d,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$accent-palette: (
+    50 : #e5f0f9,
+    100 : #bfd9f0,
+    200 : #95c0e6,
+    300 : #6aa6db,
+    400 : #4a93d4,
+    500 : #2a80cc,
+    600 : #2578c7,
+    700 : #1f6dc0,
+    800 : #1963b9,
+    900 : #0f50ad,
+    A100 : #dce9ff,
+    A200 : #a9c9ff,
+    A400 : #76a9ff,
+    A700 : #5d99ff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+
+$warn-palette: (
+    50 : #f9e5e5,
+    100 : #f0bfbf,
+    200 : #e69595,
+    300 : #db6a6a,
+    400 : #d44a4a,
+    500 : #cc2a2a,
+    600 : #c72525,
+    700 : #c01f1f,
+    800 : #b91919,
+    900 : #ad0f0f,
+    A100 : #ffdcdc,
+    A200 : #ffa9a9,
+    A400 : #ff7676,
+    A700 : #ff5d5d,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+
+$primary: mat-palette($primary-palette);
+$accent: mat-palette($accent-palette);
+$warn: mat-palette($warn-palette);
+
+$custom-theme: mat-light-theme($primary, $accent, $warn);
+
+
+@include angular-material-theme($custom-theme);
